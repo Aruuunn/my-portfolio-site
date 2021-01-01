@@ -1,0 +1,95 @@
+$xs: 0px;
+$sm: 960px;
+$md: 1280px;
+$lg: 1920px;
+
+.rounded {
+    border-radius: 3px;
+}
+
+.fullWidth {
+    width:100%;
+}
+
+
+
+.fullHeight {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flexJustifyCenter {
+    @extend .flex;
+    justify-content: center;
+}
+
+.flexSpaceBetween {
+    @extend .flex;
+    justify-content: space-between;
+}
+
+.flexAlignCenter {
+    @extend .flex;
+    align-items: center;
+}
+
+.flexBothCenter {
+    @extend .flexJustifyCenter;
+    @extend .flexAlignCenter;
+}
+
+.flexColumn {
+    @extend .flex;
+    flex-direction: column;
+}
+
+@mixin hide {
+    visibility: hidden;
+    position: absolute;
+    top: -100000;
+}
+
+
+.container {
+    width: 100%;
+    margin:auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+// For extra small screen  
+@media only screen and (min-width: $xs) {
+    .container {
+        margin:0;
+    }
+}
+
+
+// For Small Screens 
+@media only screen and (min-width: $sm) {
+    .container {
+        padding: 20px;
+    }
+}
+
+
+// For medium size Screens 
+@media only screen and (min-width: $md) {
+    .container {
+        margin:auto;
+        max-width: 1280px;
+
+    }
+}
+
+
+
+// For  large Screens 
+@media only screen and (min-width: $lg) {
+
+}
+

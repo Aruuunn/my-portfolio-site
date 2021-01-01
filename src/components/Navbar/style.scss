@@ -1,0 +1,109 @@
+@import "../../styles/font.module.scss";
+@import "../../styles/colors.scss";
+@import "../../styles/common.module.scss";
+
+.hide-element {
+    @include hide;
+}
+
+
+nav {
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    @extend .flexBothCenter;
+}
+
+.main {
+    @extend .mono;
+    @extend .container;
+    @extend .flexSpaceBetween;
+}
+
+.item-container {
+    @extend .flexSpaceBetween;
+}
+
+.item  {
+    @extend .mono;
+    color: $grey-darker;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.item-expand {
+    @extend .container;
+    @extend .flexBothCenter;
+    background-color: $black;
+}
+
+
+.item-expand-container {
+    position: fixed;
+    top:30px;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    @extend .flexBothCenter;
+    flex-direction: column;   
+    animation:expand;
+    animation-duration:0.5s;
+}
+
+
+@keyframes expand {
+    0% {
+        height: 10vh;
+        opacity: 0;
+    }
+    100%{
+        height: 80vh;
+        opacity: 1;
+    }
+}
+
+.menu-icon{
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+.menu-icon:active {
+    transform: rotate(360deg);
+}
+
+.item-active{
+    color: $green;
+    &::after {
+        content: " >";
+    }
+    &::before {
+        content: "< ";
+    }
+}
+
+.item-active:hover , .item:hover {
+    color:white;
+}
+
+
+@media only screen  and (max-width:500px){
+
+    .item-container {
+        @include hide;
+    }
+
+}
+@media only screen  and (min-width:500px){
+
+    .item-expand-container, .menu-icon {
+        @include hide;
+    }
+}
+
+@media only screen  and (min-width:$md){
+    nav {
+        padding: 0;
+    }
+}
