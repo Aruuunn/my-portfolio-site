@@ -1,0 +1,10 @@
+@import "../../styles/common.module.scss";
+@import "../../styles/font.module.scss";
+
+
+.content-container {
+    @extend .flexBothCenter;
+    height: 85vh;
+    @extend .mono;
+    font-size: 24px;
+}
