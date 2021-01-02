@@ -11,3 +11,4 @@ export const fullHeight: string;
 export const fullWidth: string;
 export const item: string;
 export const rounded: string;
+export const secondaryText: string;

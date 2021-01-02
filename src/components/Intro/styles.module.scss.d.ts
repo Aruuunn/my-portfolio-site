@@ -15,3 +15,4 @@ export const roboto: string;
 export const rounded: string;
 export const secondaryText: string;
 export const underline: string;
+export const hideElement: string;

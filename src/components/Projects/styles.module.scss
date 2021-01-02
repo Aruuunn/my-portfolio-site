@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+
+.mainContainer {
+    background-color: $black-darker;
+    padding-top: 70px;
+}
+
+.projectsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media only screen  and (max-width:1275px){
+    .projectsContainer {
+       justify-content: flex-start;
+    }
+}

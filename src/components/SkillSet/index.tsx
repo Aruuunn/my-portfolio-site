@@ -30,14 +30,18 @@ const skills: { name: string; value: 1 | 2 | 3 | 4 | 5 }[] = [
 
 function Skillset({}: Props): ReactElement {
   const [limit, setLimit] = useState(10);
-  console.log(window.innerHeight);
+
   return (
     <div id="skillset" className={styles.mainContainer}>
       <section className={commonStyles.container}>
-        <h2>My Skillset</h2>
+        <h2 style={{ paddingLeft: "10px" }}>My Skillset</h2>
         <p
           className={commonStyles.secondaryText}
-          style={{ marginTop: "30px", marginBottom: "30px" }}
+          style={{
+            marginTop: "30px",
+            marginBottom: "30px",
+            paddingLeft: "10px",
+          }}
         >
           /* I love learning new technologies and applying it. */
         </p>

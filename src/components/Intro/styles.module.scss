@@ -2,6 +2,9 @@
 @import "../../styles/font.module.scss";
 @import "../../styles/colors.scss";
 
+.hideElement {
+    @include hide;
+}
 
 .contentContainer {
     @extend .container;

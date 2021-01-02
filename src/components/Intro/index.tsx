@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useState, useEffect } from "react";
 
 import { MyImage } from "./components";
 import GithubIcon from "../../images/github.svg";
@@ -8,6 +8,16 @@ import styles from "./styles.module.scss";
 interface Props {}
 
 function Intro({}: Props): ReactElement {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => (!scrolled ? setScrolled(true) : null);
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.contentContainer} id="intro">
       <MyImage style={{ marginBottom: "70px" }} size={200} />
@@ -19,7 +29,7 @@ function Intro({}: Props): ReactElement {
           Enthusiast. I love coding and cofee ☕.
         </p>
       </div>
-      <div className={styles.contactContainer}>
+      <div className={scrolled ? styles.hideElement : styles.contactContainer}>
         <img
           src={GithubIcon}
           alt="gtihub"
