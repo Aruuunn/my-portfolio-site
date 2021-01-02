@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "tsm src --watch & gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.0",
-    "sass": "^1.32.0"
+    "sass": "^1.32.0",
+    "typed-scss-modules": "^3.4.0"
   }
 }

@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from "react";
 import { Link } from "gatsby";
 
 import MenuIcon from "../../images/menu.svg";
-import "./style.scss";
+import styles from "./style.module.scss";
 
 interface Props {}
 
@@ -10,8 +10,8 @@ function Navbar({}: Props): ReactElement {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
-      <nav>
-        <div className="main">
+      <nav className={styles.appbar}>
+        <div className={styles.main}>
           <div>
             <strong>Arun</strong>
             {"  "}Murugan
@@ -21,26 +21,44 @@ function Navbar({}: Props): ReactElement {
               setMenuOpen((s) => !s);
             }}
           >
-            <img src={MenuIcon} alt="menu-open" className="menu-icon" />
+            <img src={MenuIcon} alt="menu-open" className={styles.menuIcon} />
           </div>
-          <div className={"item-container"}>
-            <Link className="item" activeClassName={"item-active"} to="/">
+          <div className={styles.itemContainer}>
+            <Link
+              className={styles.item}
+              activeClassName={styles.itemActive}
+              to="/"
+            >
               Home
             </Link>
-            <Link activeClassName={"item-active"} className="item" to="/blog">
+            <Link
+              activeClassName={styles.itemActive}
+              className={styles.item}
+              to="/blog"
+            >
               Blog
             </Link>
           </div>
         </div>
       </nav>
-      <div className={menuOpen ? "item-expand-container" : "hide-element"}>
-        <div className="item-expand">
-          <Link className="item" activeClassName={"item-active"} to="/">
+      <div
+        className={menuOpen ? styles.itemExpandContainer : styles.hideElement}
+      >
+        <div className={styles.itemExpand}>
+          <Link
+            className={styles.item}
+            activeClassName={styles.itemActive}
+            to="/"
+          >
             Home
           </Link>
         </div>
-        <div className="item-expand">
-          <Link activeClassName={"item-active"} className="item" to="/blog">
+        <div className={styles.itemExpand}>
+          <Link
+            activeClassName={styles.itemActive}
+            className={styles.item}
+            to="/blog"
+          >
             Blog
           </Link>
         </div>

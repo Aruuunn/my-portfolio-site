@@ -1,0 +1,11 @@
+@import "../../styles/colors.scss";
+@import "../../styles/common.module.scss";
+
+
+
+
+.mainContainer {
+    background-color: $black-darker;
+    padding: 50px 10px 10px 10px;
+    min-height: 100vh;// must remove !!!!!!
+}

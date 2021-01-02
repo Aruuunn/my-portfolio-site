@@ -1,0 +1,54 @@
+@import "../../styles/common.module.scss";
+@import "../../styles/font.module.scss";
+@import "../../styles/colors.scss";
+
+
+.contentContainer {
+    @extend .container;
+    @extend .flexBothCenter;
+    justify-content: space-around;
+    height: calc( 100vh - 70px );
+    @extend .mono;
+    font-size: 24px;
+    flex-wrap: wrap;
+}
+
+.underline {
+    border-bottom: 8px solid $bright-green;
+    display: inline-block;
+    line-height: 0.85;
+}
+
+.item {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 70px;
+    @extend .flexBothCenter;
+}
+
+.contactContainer {
+    @extend .flex;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100px;
+}
+
+@media only screen and (max-width:$sm){
+    .contentContainer {
+        font-size: 18px;
+    }
+}
+
+
+
+@media only screen and (max-width:$md){
+    .item {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+

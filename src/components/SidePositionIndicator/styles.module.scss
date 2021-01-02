@@ -1,0 +1,34 @@
+@import "../../styles/common.module.scss";
+@import "../../styles/colors.scss";
+.container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100vh;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: red;
+}
+
+
+.fillGreen {
+    fill: $bright-green;
+}
+
+.fillNone {
+    fill:none;
+}
+
+@media only screen and (max-width:$md){
+    .container{
+        @include  hide;
+    }
+}

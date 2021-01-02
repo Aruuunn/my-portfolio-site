@@ -1,9 +1,10 @@
 @import "./colors.scss";
+@import "./font.module.scss";
 
 body {
   margin: 0;
   padding: 0;
   background-color: $black;  
   color: white;
-  
+  @extend .mono;
 }

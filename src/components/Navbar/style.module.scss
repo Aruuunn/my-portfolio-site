@@ -2,28 +2,31 @@
 @import "../../styles/colors.scss";
 @import "../../styles/common.module.scss";
 
-.hide-element {
+.hideElement {
     @include hide;
 }
 
 
-nav {
+.appbar {
     font-size: 18px;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: $black;
+    z-index: 20;
     @extend .flexBothCenter;
 }
 
 .main {
     @extend .mono;
-    @extend .container;
+    padding: 20px;
+    width: 100%;
     @extend .flexSpaceBetween;
 }
 
-.item-container {
+.itemContainer {
     @extend .flexSpaceBetween;
 }
 
@@ -34,23 +37,25 @@ nav {
     margin-left: 30px;
 }
 
-.item-expand {
+.itemExpand {
     @extend .container;
     @extend .flexBothCenter;
     background-color: $black;
 }
 
 
-.item-expand-container {
+.itemExpandContainer {
     position: fixed;
     top:50px;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
+    background-color: $black;
     @extend .flexBothCenter;
     flex-direction: column;   
     animation:expand;
     animation-duration:0.5s;
+    z-index: 10;
 }
 
 
@@ -65,15 +70,15 @@ nav {
     }
 }
 
-.menu-icon{
+.menuIcon{
     transition-duration: 0.5s;
     transition-property: transform;
 }
-.menu-icon:active {
+.menuIcon:active {
     transform: rotate(360deg);
 }
 
-.item-active{
+.itemActive{
     color: $green;
     &::after {
         content: " >";
@@ -83,21 +88,21 @@ nav {
     }
 }
 
-.item-active:hover , .item:hover {
+.itemActive:hover , .item:hover {
     color:white;
 }
 
 
 @media only screen  and (max-width:500px){
 
-    .item-container {
+    .itemContainer {
         @include hide;
     }
 
 }
 @media only screen  and (min-width:500px){
 
-    .item-expand-container, .menu-icon {
+    .itemExpandContainer, .menuIcon {
         @include hide;
     }
 }
