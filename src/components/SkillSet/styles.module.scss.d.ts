@@ -12,3 +12,4 @@ export const rounded: string;
 export const secondaryText: string;
 export const showMoreText: string;
 export const skillsContainer: string;
+export const underlinedLink: string;

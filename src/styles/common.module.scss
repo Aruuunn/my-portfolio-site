@@ -67,6 +67,17 @@ $lg: 1920px;
     box-sizing: border-box;
 }
 
+.underlinedLink {
+    display: inline-block;
+    cursor: pointer;
+    color: $grey;
+    border-bottom: 1px solid $bright-green;
+}
+
+.underlinedLink:hover {
+    background-color: $bright-green;
+    color:black;
+}
 
 // For extra small screen  
 @media only screen and (min-width: $xs) {

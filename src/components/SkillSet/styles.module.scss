@@ -18,14 +18,7 @@
 }
 
 .showMoreText {
+    @extend .underlinedLink;
     margin:10px;
-    display: inline-block;
-    cursor: pointer;
-    color: $grey;
-    border-bottom: 1px solid $bright-green;
 }
 
-.showMoreText:hover {
-    background-color: $bright-green;
-    color:black;
-}

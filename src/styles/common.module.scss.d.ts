@@ -9,3 +9,4 @@ export const fullHeight: string;
 export const fullWidth: string;
 export const rounded: string;
 export const secondaryText: string;
+export const underlinedLink: string;

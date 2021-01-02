@@ -8,7 +8,18 @@ import { FluidObject } from "gatsby-image";
 
 interface Props {}
 
+function calculateLimitBasedOnDeviceWidth() {
+  if (window.innerWidth > 1280) {
+    return 6;
+  } else if (window.innerWidth > 890) {
+    return 4;
+  } else {
+    return 2;
+  }
+}
+
 function Projects({}: Props): ReactElement {
+  const [limit, setLimit] = useState(calculateLimitBasedOnDeviceWidth());
   //---- mocking data
   const data = useStaticQuery(graphql`
     query {
@@ -22,7 +33,7 @@ function Projects({}: Props): ReactElement {
     }
   `);
 
-  const mockData: {
+  const projects: {
     fluid: FluidObject;
     title: string;
     description: string;
@@ -30,7 +41,7 @@ function Projects({}: Props): ReactElement {
     githubUrl?: string;
   }[] = [];
   for (let i = 0; i < 6; i++) {
-    mockData.push({
+    projects.push({
       title: "Labore nostrud nisi aute et dolore in.",
       description:
         "Lorem nisi duis anim aliqua deserunt laboris adipisicing dolore cillum et consequat reprehenderit tempor.",
@@ -43,7 +54,7 @@ function Projects({}: Props): ReactElement {
   }
 
   //-----
-  console.log(mockData);
+  console.log(projects);
   return (
     <div id="projects" className={styles.mainContainer}>
       <section className={commonStyles.container}>
@@ -61,7 +72,7 @@ function Projects({}: Props): ReactElement {
           brain. */
         </p>
         <div className={styles.projectsContainer}>
-          {mockData.map((o, i) => {
+          {projects.slice(0, limit).map((o, i) => {
             return (
               <Project
                 key={i}
@@ -80,6 +91,17 @@ function Projects({}: Props): ReactElement {
             );
           })}
         </div>
+        {projects.length > limit ? (
+          <div
+            style={{ margin: "10px" }}
+            className={commonStyles.underlinedLink}
+            onClick={() => {
+              setLimit(projects.length);
+            }}
+          >
+            Show all
+          </div>
+        ) : null}
       </section>
     </div>
   );
