@@ -6,6 +6,7 @@ import {
   SidePositionIndicator,
   Skillset,
   Projects,
+  WorkExperience,
 } from "../components";
 import "../styles/global.scss";
 
@@ -18,9 +19,17 @@ const Home = (props: Props) => {
         <Intro />
         <Skillset />
         <Projects />
+        <WorkExperience />
       </Layout>
       <SidePositionIndicator
-        sections={["intro", "skillset", "projects", "blog", "contact"]}
+        sections={[
+          "intro",
+          "skillset",
+          "projects",
+          "work-experience",
+          "blog",
+          "contact",
+        ]}
       />
     </>
   );

@@ -13,15 +13,26 @@ interface Props {
   url?: string;
   githubUrl?: string;
   key?: any;
+  tags: string[];
 }
 
 function Project(props: Props): ReactElement {
-  const { description, title, fluid, githubUrl, url, key } = props;
+  const { description, title, fluid, githubUrl, url, key, tags } = props;
   return (
     <div key={key} className={styles.container}>
       <Img fluid={fluid} />
       <h4>{title}</h4>
       <p className={styles.description}>{description}</p>
+      <div className={styles.tagsContainer}>
+        {tags.map((o, i) => {
+          return (
+            <div className={styles.tag} key={i}>
+              #{o}
+            </div>
+          );
+        })}
+      </div>
+
       <div className={styles.linksContainer}>
         {url ? (
           <Link to={url}>

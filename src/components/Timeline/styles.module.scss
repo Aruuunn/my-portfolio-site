@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+.container {
+    border-left: 2px solid $grey-darker;
+    position: relative;
+    margin-left: 12px;
+}
+
+.topOutlinedCircle {
+    position: absolute;
+    top:-14px;
+    left:-8px;
+}
+
+.filledCircle {
+    position: absolute;
+    left: -8px;
+    display: flex;
+}

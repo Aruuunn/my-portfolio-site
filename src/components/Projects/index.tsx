@@ -74,6 +74,7 @@ function Projects({}: Props): ReactElement {
                     "Dolor id laboris aliquip enim excepteur culpa qui dolore incididunt cillum nulla nostrud labore aliquip.",
                   githubUrl:
                     "Duis tempor commodo duis tempor excepteur aliqua consectetur sunt excepteur dolore est officia.",
+                  tags: ["reactjs", "typescript", "material ui", "frontend"],
                 }}
               />
             );
