@@ -13,4 +13,5 @@ export const item: string;
 export const mono: string;
 export const roboto: string;
 export const rounded: string;
+export const secondaryText: string;
 export const underline: string;

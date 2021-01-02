@@ -1,0 +1,18 @@
+@import "../../../../styles/colors.scss";
+
+
+.barContainer {
+    display: flex;
+}
+
+.bar {
+    background-color: $grey-darker;
+    width: 10px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.filledBar {
+    @extend .bar;
+    background-color: $bright-green;
+}

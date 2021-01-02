@@ -31,6 +31,7 @@
 }
 
 .item  {
+    padding: 0 10px 0 10px;
     @extend .mono;
     color: $grey-darker;
     text-decoration: none;
@@ -79,6 +80,7 @@
 }
 
 .itemActive{
+    @extend .item;
     color: $green;
     &::after {
         content: " >";
@@ -89,7 +91,8 @@
 }
 
 .itemActive:hover , .item:hover {
-    color:white;
+    color:black;
+    background-color: $bright-green;
 }
 
 

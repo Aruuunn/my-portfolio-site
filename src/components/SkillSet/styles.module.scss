@@ -9,3 +9,24 @@
     padding: 50px 10px 10px 10px;
     min-height: 100vh;// must remove !!!!!!
 }
+
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showMoreText {
+    margin:10px;
+    display: inline-block;
+    cursor: pointer;
+    color: $grey;
+    border-bottom: 1px solid $bright-green;
+}
+
+.showMoreText:hover {
+    background-color: $bright-green;
+    color:black;
+}

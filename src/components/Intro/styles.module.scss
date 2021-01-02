@@ -30,7 +30,7 @@
     @extend .flex;
     position: absolute;
     bottom: 30px;
-    right: 20px;
+    right: 30px;
     justify-content: space-between;
     flex-direction: column;
     height: 100px;
@@ -48,6 +48,9 @@
     .item {
         width: 100%;
         padding: 20px;
+    }
+    .contactContainer {
+        @include hide;
     }
 }
 

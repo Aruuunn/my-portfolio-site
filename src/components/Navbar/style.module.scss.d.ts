@@ -20,3 +20,4 @@ export const menuIcon: string;
 export const mono: string;
 export const roboto: string;
 export const rounded: string;
+export const secondaryText: string;

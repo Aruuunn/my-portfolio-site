@@ -27,7 +27,7 @@
     fill:none;
 }
 
-@media only screen and (max-width:$md){
+@media only screen and (max-width:1400px){
     .container{
         @include  hide;
     }
