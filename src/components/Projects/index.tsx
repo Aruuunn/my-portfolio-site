@@ -1,10 +1,10 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement, useState, useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { FluidObject } from "gatsby-image";
 
 import { Project } from "./components";
 import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
-import { FluidObject } from "gatsby-image";
 
 interface Props {
   disableAnimation?: boolean;
@@ -23,6 +23,7 @@ function calculateLimitBasedOnDeviceWidth() {
 function Projects(props: Props): ReactElement {
   const { disableAnimation } = props;
   const [limit, setLimit] = useState(calculateLimitBasedOnDeviceWidth());
+
   //---- mocking data
   const data = useStaticQuery(graphql`
     query {
@@ -57,7 +58,7 @@ function Projects(props: Props): ReactElement {
   }
 
   //-----
-  console.log(projects);
+
   return (
     <div id="projects" className={styles.mainContainer}>
       <section className={commonStyles.container}>

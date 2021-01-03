@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from "react";
+import React, { ReactElement, useEffect, useState, createContext } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -23,7 +23,7 @@ function Layout(props: Props): ReactElement {
     <div>
       <Header title={title} />
       <Navbar />
-      <CustomCursor />
+      <CustomCursor disabled />
       <div style={{ paddingTop: "50px", minHeight: "calc( 100vh - 125px)" }}>
         {children}
       </div>

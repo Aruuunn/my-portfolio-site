@@ -32,7 +32,11 @@ function Project(props: Props): ReactElement {
             <img
               src={externalLinkIcon}
               alt="external link"
-              style={{ height: "35px", width: "35px" }}
+              style={{
+                height: "35px",
+                width: "35px",
+                cursor: "pointer",
+              }}
             />
           </Link>
         ) : null}
@@ -41,7 +45,12 @@ function Project(props: Props): ReactElement {
             <img
               src={gtihubIcon}
               alt="github link"
-              style={{ height: "30px", width: "30px", marginLeft: "20px" }}
+              style={{
+                height: "30px",
+                width: "30px",
+                marginLeft: "20px",
+                cursor: "pointer",
+              }}
             />
           </Link>
         ) : null}

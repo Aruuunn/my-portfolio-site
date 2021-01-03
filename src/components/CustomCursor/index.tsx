@@ -1,15 +1,22 @@
 import React, { ReactElement, useState, useEffect } from "react";
 
-interface Props {}
+interface Props {
+  disabled?: boolean;
+}
 
-function CustomCursor({}: Props): ReactElement {
-  const [coord, setCoordinates] = useState({ x: -1, y: -1 });
+function CustomCursor({ disabled }: Props): ReactElement {
+  const initialState = { x: -1000, y: -1000 };
+  const [coord, setCoordinates] = useState(initialState);
 
   window.onmousemove = (e: MouseEvent) => {
     setTimeout(() => {
-      setCoordinates({ x: e.clientX, y: e.clientY });
+      if (!disabled) setCoordinates({ x: e.clientX, y: e.clientY });
     }, 100);
   };
+
+  if (disabled) {
+    return <div />;
+  }
 
   return (
     <div
@@ -17,7 +24,7 @@ function CustomCursor({}: Props): ReactElement {
         position: "fixed",
         left: `${coord.x - 15}px`,
         top: `${coord.y - 15}px`,
-        zIndex: 70,
+        zIndex: -1,
       }}
     >
       <svg height="40" width="40">
