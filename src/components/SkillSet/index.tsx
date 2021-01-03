@@ -34,15 +34,8 @@ function Skillset({}: Props): ReactElement {
   return (
     <div id="skillset" className={styles.mainContainer}>
       <section className={commonStyles.container}>
-        <h2 style={{ paddingLeft: "10px" }}>My Skillset</h2>
-        <p
-          className={commonStyles.secondaryText}
-          style={{
-            marginTop: "30px",
-            marginBottom: "30px",
-            paddingLeft: "10px",
-          }}
-        >
+        <h2 style={{ position: "relative", left: "10px" }}>My Skillset</h2>
+        <p className={commonStyles.secondaryText}>
           /* I love learning new technologies and applying it. */
         </p>
         <div className={styles.skillsContainer}>

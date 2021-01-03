@@ -9,12 +9,12 @@ function WorkExperience({}: Props): ReactElement {
   return (
     <div
       className={commonStyles.container}
-      style={{ paddingTop: "30px" }}
+      style={{ paddingTop: "10px" }}
       id="work-experience"
     >
-      <h2 style={{ paddingLeft: "10px" }}>Work Experience</h2>
+      <h2 style={{ position: "relative", left: "10px" }}>Work Experience</h2>
       <p
-        style={{ paddingLeft: "10px", marginTop: "30px", marginBottom: "40px" }}
+        style={{ marginBottom: "40px" }}
         className={commonStyles.secondaryText}
       >
         /* Team work makes the dream work */

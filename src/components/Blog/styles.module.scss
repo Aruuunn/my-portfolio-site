@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+
+.container {
+    border: 1px solid $grey-darker;
+    border-radius: 3px;
+    padding: 20px;
+}
+.tag {
+    padding: 5px;
+    font-size: 14px;
+    background-color: $green;
+    color:black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.description {
+    color:$grey
+}

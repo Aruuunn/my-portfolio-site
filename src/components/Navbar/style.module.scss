@@ -81,7 +81,7 @@
 
 .itemActive{
     @extend .item;
-    color: $green;
+    color: $bright-green;
     &::after {
         content: " >";
     }

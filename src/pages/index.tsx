@@ -7,12 +7,12 @@ import {
   Skillset,
   Projects,
   WorkExperience,
+  BlogsSection,
+  ContactMe,
 } from "../components";
 import "../styles/global.scss";
 
-interface Props {}
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <>
       <Layout title={"Arun Murugan | Personal Portfolio"}>
@@ -20,6 +20,8 @@ const Home = (props: Props) => {
         <Skillset />
         <Projects />
         <WorkExperience />
+        <BlogsSection />
+        <ContactMe />
       </Layout>
       <SidePositionIndicator
         sections={[
@@ -27,8 +29,8 @@ const Home = (props: Props) => {
           "skillset",
           "projects",
           "work-experience",
-          "blog",
-          "contact",
+          "blogs",
+          "contact-me",
         ]}
       />
     </>

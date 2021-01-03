@@ -1,4 +1,5 @@
 import React, { ReactElement, useState, useEffect } from "react";
+import { Link } from "gatsby";
 
 import { MyImage } from "./components";
 import GithubIcon from "../../images/github.svg";
@@ -30,16 +31,29 @@ function Intro({}: Props): ReactElement {
         </p>
       </div>
       <div className={scrolled ? styles.hideElement : styles.contactContainer}>
-        <img
-          src={GithubIcon}
-          alt="gtihub"
-          style={{ height: "35px", width: "35px" }}
-        />
-        <img
-          src={LinkedinIcon}
-          alt="linkedin"
-          style={{ height: "35px", width: "44px" }}
-        />
+        <Link
+          target="_blank"
+          rel="noopener"
+          to="https://github.com/ArunMurugan78"
+        >
+          <img
+            src={GithubIcon}
+            alt="gtihub"
+            style={{ height: "35px", width: "35px" }}
+          />
+        </Link>
+        <Link
+          target="_blank"
+          rel="noopener"
+          to="https://www.linkedin.com/in/arun-murugan-50885717a/"
+        >
+          {" "}
+          <img
+            src={LinkedinIcon}
+            alt="linkedin"
+            style={{ height: "35px", width: "44px" }}
+          />
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,13 @@
+@import "../../styles/common.module.scss";
+@import "../../styles/colors.scss";
+
+.mainContainer {
+    background-color: $black-darker;
+    color:$grey;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 14px;
+    align-items: center;
+}

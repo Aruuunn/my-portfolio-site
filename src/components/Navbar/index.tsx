@@ -34,9 +34,9 @@ function Navbar({}: Props): ReactElement {
             <Link
               activeClassName={styles.itemActive}
               className={styles.item}
-              to="/blog"
+              to="/blogs"
             >
-              Blog
+              Blogs
             </Link>
           </div>
         </div>

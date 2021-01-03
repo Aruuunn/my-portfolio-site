@@ -1,0 +1,16 @@
+@import "../../styles/colors.scss";
+
+.tag {
+    padding: 5px;
+    font-size: 14px;
+    background-color: $green;
+    color:black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.tagsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}

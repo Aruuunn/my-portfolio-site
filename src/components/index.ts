@@ -6,3 +6,7 @@ export { default as SidePositionIndicator } from "./SidePositionIndicator";
 export { default as Skillset } from "./SkillSet";
 export { default as Projects } from "./Projects";
 export { default as WorkExperience } from "./WorkExperience";
+export { default as BlogsSection } from "./BlogsSection";
+export { default as ContactMe } from "./ContactMe";
+export { default as Footer } from "./Footer";
+export { default as Tags } from "./Tags";

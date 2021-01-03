@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import Img, { FluidObject } from "gatsby-image";
 import { Link } from "gatsby";
 
+import Tags from "../../../Tags";
 import externalLinkIcon from "../../../../images/link.svg";
 import gtihubIcon from "../../../../images/github.svg";
 import styles from "./styles.module.scss";
@@ -23,15 +24,7 @@ function Project(props: Props): ReactElement {
       <Img fluid={fluid} />
       <h4>{title}</h4>
       <p className={styles.description}>{description}</p>
-      <div className={styles.tagsContainer}>
-        {tags.map((o, i) => {
-          return (
-            <div className={styles.tag} key={i}>
-              #{o}
-            </div>
-          );
-        })}
-      </div>
+      <Tags tags={tags} />
 
       <div className={styles.linksContainer}>
         {url ? (
