@@ -12,20 +12,20 @@ export default function SidePositionIndicator(props: Props): ReactElement {
   const { sections } = props;
   const [current, setCurrent] = useState(0);
   const elements: HTMLElement[] = sections.map((o) => {
-    return document.getElementById(o);
+    return typeof window !== "undefined" && window.document.getElementById(o);
   });
-
-  window.addEventListener("scroll", (_) => {
-    let curr = -1;
-    for (let i = 0; i < elements.length; i++) {
-      if (isVisible(elements[i])) {
-        curr = i;
+  if (typeof window !== "undefined")
+    window.addEventListener("scroll", (_) => {
+      let curr = -1;
+      for (let i = 0; i < elements.length; i++) {
+        if (isVisible(elements[i])) {
+          curr = i;
+        }
       }
-    }
-    if (current != curr) {
-      setCurrent(curr);
-    }
-  });
+      if (current != curr) {
+        setCurrent(curr);
+      }
+    });
 
   return (
     <div className={styles.container}>

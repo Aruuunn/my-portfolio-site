@@ -11,13 +11,16 @@ interface Props {
 }
 
 function calculateLimitBasedOnDeviceWidth() {
-  if (window.innerWidth > 1280) {
-    return 6;
-  } else if (window.innerWidth > 890) {
-    return 4;
-  } else {
-    return 2;
+  if (typeof window !== "undefined") {
+    if (window.innerWidth > 1280) {
+      return 6;
+    } else if (window.innerWidth > 890) {
+      return 4;
+    } else {
+      return 2;
+    }
   }
+  return 6;
 }
 
 function Projects(props: Props): ReactElement {

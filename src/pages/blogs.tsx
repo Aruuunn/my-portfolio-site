@@ -5,7 +5,7 @@ import { Layout, MyBlogs } from "../components";
 
 function Blogs(): ReactElement {
   return (
-    <Layout title="Blogs | Arun Murugan">
+    <Layout title="Blogs | Arun Murugan" disableCustomCursor>
       <div className={commonStyles.container}>
         <h1 className={commonStyles.underlinedHeading} style={{ margin: 0 }}>
           Blogs

@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
+    title: "Personal Portfolio | Arun Murugan",
+    description: "Personal Portfolio site of Arun Murugan",
     author: "Arun Murugan",
+    siteUrl: "localhost:8000",
   },
   plugins: [
     "gatsby-plugin-sass",

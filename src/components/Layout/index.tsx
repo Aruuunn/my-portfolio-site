@@ -10,10 +10,11 @@ import Footer from "../Footer";
 interface Props {
   children: React.ReactNode;
   title?: string;
+  disableCustomCursor?: boolean;
 }
 
 function Layout(props: Props): ReactElement {
-  const { children, title } = props;
+  const { children, title, disableCustomCursor } = props;
 
   useEffect(() => {
     Aos.init({ once: true, disable: "mobile" });
@@ -23,7 +24,7 @@ function Layout(props: Props): ReactElement {
     <div>
       <Header title={title} />
       <Navbar />
-      <CustomCursor disabled />
+      <CustomCursor disabled={disableCustomCursor} />
       <div style={{ paddingTop: "50px", minHeight: "calc( 100vh - 125px)" }}>
         {children}
       </div>

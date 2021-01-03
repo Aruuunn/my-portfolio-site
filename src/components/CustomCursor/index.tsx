@@ -8,11 +8,12 @@ function CustomCursor({ disabled }: Props): ReactElement {
   const initialState = { x: -1000, y: -1000 };
   const [coord, setCoordinates] = useState(initialState);
 
-  window.onmousemove = (e: MouseEvent) => {
-    setTimeout(() => {
-      if (!disabled) setCoordinates({ x: e.clientX, y: e.clientY });
-    }, 100);
-  };
+  if (typeof window !== "undefined")
+    window.onmousemove = (e: MouseEvent) => {
+      setTimeout(() => {
+        if (!disabled) setCoordinates({ x: e.clientX, y: e.clientY });
+      }, 100);
+    };
 
   if (disabled) {
     return <div />;
