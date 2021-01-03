@@ -6,7 +6,9 @@ import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
 import { FluidObject } from "gatsby-image";
 
-interface Props {}
+interface Props {
+  disableAnimation?: boolean;
+}
 
 function calculateLimitBasedOnDeviceWidth() {
   if (window.innerWidth > 1280) {
@@ -18,7 +20,8 @@ function calculateLimitBasedOnDeviceWidth() {
   }
 }
 
-function Projects({}: Props): ReactElement {
+function Projects(props: Props): ReactElement {
+  const { disableAnimation } = props;
   const [limit, setLimit] = useState(calculateLimitBasedOnDeviceWidth());
   //---- mocking data
   const data = useStaticQuery(graphql`
@@ -64,37 +67,44 @@ function Projects({}: Props): ReactElement {
           love is that I can create something from an idea which started from my
           brain. */
         </p>
-        <div className={styles.projectsContainer}>
-          {projects.slice(0, limit).map((o, i) => {
-            return (
-              <Project
-                key={i}
-                {...{
-                  title: "Labore nostrud nisi aute et dolore in.",
-                  description:
-                    "Lorem nisi duis anim aliqua deserunt laboris adipisicing dolore cillum et consequat reprehenderit tempor.",
-                  fluid: data.file.childImageSharp.fluid,
-                  url:
-                    "Dolor id laboris aliquip enim excepteur culpa qui dolore incididunt cillum nulla nostrud labore aliquip.",
-                  githubUrl:
-                    "Duis tempor commodo duis tempor excepteur aliqua consectetur sunt excepteur dolore est officia.",
-                  tags: ["reactjs", "typescript", "material ui", "frontend"],
-                }}
-              />
-            );
-          })}
-        </div>
-        {projects.length > limit ? (
-          <div
-            style={{ margin: "10px" }}
-            className={commonStyles.underlinedLink}
-            onClick={() => {
-              setLimit(projects.length);
-            }}
-          >
-            Show all
+        <div
+          data-aos={disableAnimation ? "" : "fade-up"}
+          data-aos-offset="200"
+          data-aos-easing="ease-out"
+          data-aos-duration="600"
+        >
+          <div className={styles.projectsContainer}>
+            {projects.slice(0, limit).map((o, i) => {
+              return (
+                <Project
+                  key={i}
+                  {...{
+                    title: "Labore nostrud nisi aute et dolore in.",
+                    description:
+                      "Lorem nisi duis anim aliqua deserunt laboris adipisicing dolore cillum et consequat reprehenderit tempor.",
+                    fluid: data.file.childImageSharp.fluid,
+                    url:
+                      "Dolor id laboris aliquip enim excepteur culpa qui dolore incididunt cillum nulla nostrud labore aliquip.",
+                    githubUrl:
+                      "Duis tempor commodo duis tempor excepteur aliqua consectetur sunt excepteur dolore est officia.",
+                    tags: ["reactjs", "typescript", "material ui", "frontend"],
+                  }}
+                />
+              );
+            })}
           </div>
-        ) : null}
+          {projects.length > limit ? (
+            <div
+              style={{ margin: "10px" }}
+              className={commonStyles.underlinedLink}
+              onClick={() => {
+                setLimit(projects.length);
+              }}
+            >
+              Show all
+            </div>
+          ) : null}
+        </div>
       </section>
     </div>
   );

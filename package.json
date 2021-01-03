@@ -16,6 +16,8 @@
   },
   "license": "0BSD",
   "dependencies": {
+    "@types/aos": "^3.0.3",
+    "aos": "^2.3.4",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-manifest": "^2.9.1",

@@ -3,9 +3,13 @@ import React, { ReactElement } from "react";
 import commonStyles from "../../styles/common.module.scss";
 import Timeline from "../Timeline";
 
-interface Props {}
+interface Props {
+  disableAnimation?: boolean;
+}
 
-function WorkExperience({}: Props): ReactElement {
+function WorkExperience(props: Props): ReactElement {
+  const { disableAnimation } = props;
+
   return (
     <div
       className={commonStyles.container}
@@ -19,14 +23,21 @@ function WorkExperience({}: Props): ReactElement {
       >
         /* Team work makes the dream work */
       </p>
-      <Timeline
-        events={[
-          {
-            description: "2020 Jun- 2020 Jul, at Learnogether",
-            title: "Software Developer Intern",
-          },
-        ]}
-      />
+      <div
+        data-aos={disableAnimation ? "" : "fade-up"}
+        data-aos-offset="200"
+        data-aos-easing="ease-out"
+        data-aos-duration="600"
+      >
+        <Timeline
+          events={[
+            {
+              description: "2020 Jun- 2020 Jul, at Learnogether",
+              title: "Software Developer Intern",
+            },
+          ]}
+        />
+      </div>
     </div>
   );
 }

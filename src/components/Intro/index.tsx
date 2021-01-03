@@ -31,7 +31,7 @@ function Intro({}: Props): ReactElement {
           Enthusiast. I love coding and cofee ☕.
         </p>
 
-        <div style={{ marginTop: "40px" }}>
+        <div style={{ marginTop: "30px" }}>
           <PrimaryLinkButton to="/#contact-me" text="Download CV" />
         </div>
       </div>
