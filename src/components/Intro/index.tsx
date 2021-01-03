@@ -1,6 +1,7 @@
 import React, { ReactElement, useState, useEffect } from "react";
 import { Link } from "gatsby";
 
+import PrimaryLinkButton from "../PrimaryLinkButton";
 import { MyImage } from "./components";
 import GithubIcon from "../../images/github.svg";
 import LinkedinIcon from "../../images/linkedin.svg";
@@ -23,12 +24,16 @@ function Intro({}: Props): ReactElement {
     <div className={styles.contentContainer} id="intro">
       <MyImage style={{ marginBottom: "70px" }} size={200} />
 
-      <div className={styles.item}>
+      <div className={styles.item} style={{ display: "inline-block" }}>
         <p style={{ maxWidth: "600px" }}>
           👋 Hello there, I'm Arun. I am a{" "}
           <span className={styles.underline}>Web developer</span> and a Tech
           Enthusiast. I love coding and cofee ☕.
         </p>
+
+        <div style={{ marginTop: "40px" }}>
+          <PrimaryLinkButton to="/#contact-me" text="Download CV" />
+        </div>
       </div>
       <div className={scrolled ? styles.hideElement : styles.contactContainer}>
         <Link
