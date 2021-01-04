@@ -1,7 +1,7 @@
 import React, { ReactElement, useState, useEffect, useContext } from "react";
 import firebase from "firebase";
 
-import { FirebaseContext } from "../../firebase.provider";
+import "../../firebase";
 import Blog from "../Blog";
 import commonStyles from "../../styles/common.module.scss";
 import { Blog as IBlog } from "../Blog/Blog.interface";
@@ -11,8 +11,8 @@ import fetchBlogs from "../../utils/fetch.blogs";
 interface Props {}
 
 function MyBlogs({}: Props): ReactElement {
-  const { db } = useContext(FirebaseContext);
   const LIMIT = 10;
+  const db = firebase.firestore();
   const [fetchedAllBlogs, setFetchedAllBlogs] = useState(false);
   const [lastSnapShot, setLastSnapShot] = useState<
     firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>

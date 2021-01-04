@@ -12,10 +12,12 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages  --repo https://github.com/ArunMurugan78/ArunMurugan78.github.io.git  -d public -b master"
   },
   "license": "0BSD",
   "dependencies": {
+    "@loadable/component": "^5.14.1",
     "@types/aos": "^3.0.3",
     "aos": "^2.3.4",
     "firebase": "^8.2.1",
@@ -29,6 +31,7 @@
     "gatsby-plugin-sitemap": "^2.9.0",
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-sharp": "^2.9.0",
+    "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

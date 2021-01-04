@@ -32,13 +32,6 @@ export const projects: {
     githubUrl: "https://github.com/ArunMurugan78/my-portfolio-site",
   },
   {
-    image: "quizz-now.png",
-    title: "Quizz Now",
-    description: "A Quizz App made using Nestjs and Reactjs",
-    githubUrl: "https://github.com/ArunMurugan78/QuizzNow",
-    tags: ["full stack", "nestjs", "reactjs", "typescript", "nodejs"],
-  },
-  {
     image: "shortest-path-visualizer.png",
     title: "Shortest Path Finder",
     description: "Shortest Path finding Algorithm Visualizer",
@@ -46,6 +39,14 @@ export const projects: {
     githubUrl: "https://github.com/ArunMurugan78/Shortest-Path-Visualiser",
     tags: ["react", "javacsript", "algorithm", "bootstrap"],
   },
+  {
+    image: "quizz-now.png",
+    title: "Quizz Now",
+    description: "A Quizz App made using Nestjs and Reactjs",
+    githubUrl: "https://github.com/ArunMurugan78/QuizzNow",
+    tags: ["full stack", "nestjs", "reactjs", "typescript", "nodejs"],
+  },
+
   {
     image: "cat-gallery.png",
     title: "Cat Gallery",

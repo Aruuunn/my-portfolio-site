@@ -1,7 +1,10 @@
 import React, { ReactElement } from "react";
 
+import Loadable from "@loadable/component";
 import commonStyles from "../styles/common.module.scss";
-import { Layout, MyBlogs } from "../components";
+import { Layout } from "../components";
+
+const MyBlogs = Loadable(() => import("../components/MyBlogs"));
 
 function Blogs(): ReactElement {
   return (

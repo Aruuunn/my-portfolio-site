@@ -10,5 +10,4 @@ export { default as BlogsSection } from "./BlogsSection";
 export { default as ContactMe } from "./ContactMe";
 export { default as Footer } from "./Footer";
 export { default as Tags } from "./Tags";
-export { default as MyBlogs } from "./MyBlogs";
 export { default as CustomCursor } from "./CustomCursor";
