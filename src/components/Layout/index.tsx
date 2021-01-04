@@ -6,6 +6,7 @@ import CustomCursor from "../CustomCursor";
 import Header from "../Header";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import FirebaseProvider from "../../firebase.provider";
 
 interface Props {
   children: React.ReactNode;
@@ -21,7 +22,7 @@ function Layout(props: Props): ReactElement {
   }, []);
 
   return (
-    <div>
+    <FirebaseProvider>
       <Header title={title} />
       <Navbar />
       <CustomCursor disabled={disableCustomCursor} />
@@ -29,7 +30,7 @@ function Layout(props: Props): ReactElement {
         {children}
       </div>
       <Footer />
-    </div>
+    </FirebaseProvider>
   );
 }
 

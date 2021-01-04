@@ -1,10 +1,10 @@
 import React, { ReactElement, useState, useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { FluidObject } from "gatsby-image";
 
 import { Project } from "./components";
 import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
+import { projects } from "./projects.data";
 
 interface Props {
   disableAnimation?: boolean;
@@ -26,41 +26,20 @@ function calculateLimitBasedOnDeviceWidth() {
 function Projects(props: Props): ReactElement {
   const { disableAnimation } = props;
   const [limit, setLimit] = useState(calculateLimitBasedOnDeviceWidth());
-
-  //---- mocking data
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "p1.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+      allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+        nodes {
+          relativePath
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
     }
   `);
-
-  const projects: {
-    fluid: FluidObject;
-    title: string;
-    description: string;
-    url?: string;
-    githubUrl?: string;
-  }[] = [];
-  for (let i = 0; i < 6; i++) {
-    projects.push({
-      title: "Labore nostrud nisi aute et dolore in.",
-      description:
-        "Lorem nisi duis anim aliqua deserunt laboris adipisicing dolore cillum et consequat reprehenderit tempor.",
-      fluid: data.file.childImageSharp.fluid,
-      url:
-        "Dolor id laboris aliquip enim excepteur culpa qui dolore incididunt cillum nulla nostrud labore aliquip.",
-      githubUrl:
-        "Duis tempor commodo duis tempor excepteur aliqua consectetur sunt excepteur dolore est officia.",
-    });
-  }
-
-  //-----
 
   return (
     <div id="projects" className={styles.mainContainer}>
@@ -82,17 +61,20 @@ function Projects(props: Props): ReactElement {
               return (
                 <Project
                   key={i}
-                  {...{
-                    title: "Labore nostrud nisi aute et dolore in.",
-                    description:
-                      "Lorem nisi duis anim aliqua deserunt laboris adipisicing dolore cillum et consequat reprehenderit tempor.",
-                    fluid: data.file.childImageSharp.fluid,
-                    url:
-                      "Dolor id laboris aliquip enim excepteur culpa qui dolore incididunt cillum nulla nostrud labore aliquip.",
-                    githubUrl:
-                      "Duis tempor commodo duis tempor excepteur aliqua consectetur sunt excepteur dolore est officia.",
-                    tags: ["reactjs", "typescript", "material ui", "frontend"],
-                  }}
+                  description={o.description}
+                  tags={o.tags}
+                  url={o.url}
+                  githubUrl={o.githubUrl}
+                  title={o.title}
+                  fluid={data.allFile.nodes.reduce((t, c) => {
+                    console.log(c.relativePath, o.image);
+                    if (c.relativePath === `projects/${o.image.trim()}`) {
+                      return c.childImageSharp.fluid;
+                    }
+                    if (t) {
+                      return t;
+                    }
+                  }, undefined)}
                 />
               );
             })}

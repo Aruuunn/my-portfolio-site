@@ -15,11 +15,16 @@ export default function Blogs({}: Props): ReactElement {
           knowledge */
         </p>
         <Link
-          style={{ textDecoration: "none", position: "relative", left: "10px" }}
+          style={{
+            textDecoration: "none",
+            position: "relative",
+            left: "10px",
+            paddingRight: "10px",
+          }}
           to="/blogs"
           className={commonStyles.underlinedLink}
         >
-          Go to Blogs
+          Go to Blogs{" "}
         </Link>
       </section>
     </div>

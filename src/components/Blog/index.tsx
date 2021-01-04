@@ -5,15 +5,9 @@ import { Tags } from "../../components";
 import linkIcon from "../../images/link.svg";
 import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
+import { Blog as IBlog } from "./Blog.interface";
 
-interface Props {
-  title: string;
-  source: string;
-  description: string;
-  tags: string[];
-  key?: any;
-  url: string;
-}
+type Props = IBlog & { key?: any };
 
 function Blog(props: Props): ReactElement {
   const { title, description, source, tags, key, url } = props;

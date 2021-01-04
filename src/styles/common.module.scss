@@ -69,6 +69,19 @@ $lg: 1920px;
 }
 
 
+.textButton {
+    border: none;
+    @extend .underlinedLink;
+    display: inline;
+    color:$grey;
+    background-color: transparent;
+    padding-right: 10px;
+    padding-left: 2px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
 .container {
     width: 100%;
     margin:auto;

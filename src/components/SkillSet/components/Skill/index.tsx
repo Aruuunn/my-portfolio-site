@@ -1,13 +1,12 @@
 import React, { ReactElement } from "react";
 
 import SkillBar from "../SkillBar";
+import ISkill from "../../Skill.interface";
 import styles from "./styles.module.scss";
 
-interface Props {
-  name: string;
-  value: 1 | 2 | 3 | 4 | 5;
+type Props = ISkill & {
   key?: any;
-}
+};
 
 export default function Skill({ name, value, key }: Props): ReactElement {
   return (

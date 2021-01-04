@@ -15,7 +15,7 @@ import "../styles/global.scss";
 const Home = () => {
   return (
     <>
-      <Layout title={"Arun Murugan | Personal Portfolio"}>
+      <Layout title={"Arun Murugan | Personal Portfolio"} disableCustomCursor>
         <Intro />
         <Skillset />
         <Projects />

@@ -32,7 +32,7 @@ function Intro({}: Props): ReactElement {
         </p>
 
         <div style={{ marginTop: "30px" }}>
-          <PrimaryLinkButton to="/#contact-me" text="Download CV" />
+          <PrimaryLinkButton to="/#contact-me" text="Contact Me" />
         </div>
       </div>
       <div className={scrolled ? styles.hideElement : styles.contactContainer}>

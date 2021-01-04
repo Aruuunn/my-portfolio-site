@@ -12,7 +12,7 @@ function CustomCursor({ disabled }: Props): ReactElement {
     window.onmousemove = (e: MouseEvent) => {
       setTimeout(() => {
         if (!disabled) setCoordinates({ x: e.clientX, y: e.clientY });
-      }, 100);
+      }, 300);
     };
 
   if (disabled) {
