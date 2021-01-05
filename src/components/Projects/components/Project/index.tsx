@@ -28,7 +28,7 @@ function Project(props: Props): ReactElement {
 
       <div className={styles.linksContainer}>
         {url ? (
-          <Link to={url}>
+          <Link target="_blank" rel="noopener" to={url}>
             <img
               src={externalLinkIcon}
               alt="external link"
@@ -41,7 +41,7 @@ function Project(props: Props): ReactElement {
           </Link>
         ) : null}
         {githubUrl ? (
-          <Link to={githubUrl}>
+          <Link target="_blank" rel="noopener" to={githubUrl}>
             <img
               src={gtihubIcon}
               alt="github link"
