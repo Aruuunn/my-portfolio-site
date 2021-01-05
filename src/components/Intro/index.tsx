@@ -28,7 +28,7 @@ function Intro({}: Props): ReactElement {
         <p style={{ maxWidth: "600px" }}>
           👋 Hello there, I'm Arun. I am a{" "}
           <span className={styles.underline}>Web developer</span> and a Tech
-          Enthusiast. I love coding and cofee ☕.
+          Enthusiast. I love coding and coffee ☕.
         </p>
 
         <div style={{ marginTop: "30px" }}>
