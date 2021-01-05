@@ -29,7 +29,7 @@ function Skillset(props: Props): ReactElement {
           {" "}
           <div className={styles.skillsContainer}>
             {skills.slice(0, limit).map((o, i) => (
-              <Skill key={i} {...o} />
+              <Skill key={i} {...o} noSkillBar />
             ))}
           </div>
           {skills.length > limit ? (
