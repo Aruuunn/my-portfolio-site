@@ -26,7 +26,7 @@ function Certifications({ disableAnimation }: Props): ReactElement {
         data-aos={disableAnimation ? "" : "fade-up"}
         data-aos-offset="200"
         data-aos-easing="ease-out"
-        data-aos-duration="600"
+        data-aos-duration="1000"
       >
         {myCertifications.slice(0, limit).map((o, i) => {
           return (

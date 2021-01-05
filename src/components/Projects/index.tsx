@@ -54,7 +54,7 @@ function Projects(props: Props): ReactElement {
           data-aos={disableAnimation ? "" : "fade-up"}
           data-aos-offset="200"
           data-aos-easing="ease-out"
-          data-aos-duration="600"
+          data-aos-duration="1000"
         >
           <div className={styles.projectsContainer}>
             {projects.slice(0, limit).map((o, i) => {

@@ -27,7 +27,7 @@ function WorkExperience(props: Props): ReactElement {
         data-aos={disableAnimation ? "" : "fade-up"}
         data-aos-offset="200"
         data-aos-easing="ease-out"
-        data-aos-duration="600"
+        data-aos-duration="1000"
       >
         <Timeline
           events={[
