@@ -11,3 +11,4 @@ export { default as ContactMe } from "./ContactMe";
 export { default as Footer } from "./Footer";
 export { default as Tags } from "./Tags";
 export { default as CustomCursor } from "./CustomCursor";
+export { default as Certifications } from "./Certifications";

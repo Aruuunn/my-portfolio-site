@@ -9,16 +9,18 @@ import {
   WorkExperience,
   BlogsSection,
   ContactMe,
+  Certifications,
 } from "../components";
 import "../styles/global.scss";
 
 const Home = () => {
   return (
     <>
-      <Layout title={"Arun Murugan | Personal Portfolio"}>
+      <Layout title={"Arun Murugan | Personal Portfolio"} disableCustomCursor>
         <Intro />
         <Skillset />
         <Projects />
+        <Certifications />
         <WorkExperience />
         <BlogsSection />
         <ContactMe />
@@ -28,6 +30,7 @@ const Home = () => {
           "intro",
           "skillset",
           "projects",
+          "certifications",
           "work-experience",
           "blogs",
           "contact-me",

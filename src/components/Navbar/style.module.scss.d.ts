@@ -21,5 +21,6 @@ export const mono: string;
 export const roboto: string;
 export const rounded: string;
 export const secondaryText: string;
+export const textButton: string;
 export const underlinedHeading: string;
 export const underlinedLink: string;

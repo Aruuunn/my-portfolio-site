@@ -13,7 +13,7 @@ function WorkExperience(props: Props): ReactElement {
   return (
     <div
       className={commonStyles.container}
-      style={{ paddingTop: "10px" }}
+      style={{ paddingTop: "30px", paddingBottom: "30px" }}
       id="work-experience"
     >
       <h2 style={{ position: "relative", left: "10px" }}>Work Experience</h2>

@@ -9,7 +9,10 @@ interface Props {}
 
 function ContactMe({}: Props): ReactElement {
   return (
-    <div className={commonStyles.container} style={{ paddingTop: "50px" }}>
+    <div
+      className={commonStyles.container}
+      style={{ paddingTop: "40px", paddingBottom: "40px" }}
+    >
       <section id="contact-me">
         <h1 style={{ position: "relative", left: "10px" }}>Contact Me</h1>
         <p
