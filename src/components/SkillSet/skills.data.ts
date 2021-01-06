@@ -4,7 +4,6 @@ export const skills: ISkill[] = [
   { name: "Javascript", value: 4 },
   { name: "Typescript", value: 3 },
   { name: "Reactjs", value: 4 },
-  { name: "Reactjs", value: 4 },
   { name: "CSS3", value: 3 },
   { name: "Graphql", value: 2 },
   { name: "Nodejs", value: 3 },

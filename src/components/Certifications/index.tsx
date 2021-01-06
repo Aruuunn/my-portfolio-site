@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
+import { InsideMultilineCommentLikeText } from "../../components";
 import externalLinkIcon from "../../images/link.svg";
 import { myCertifications } from "./certifications.data";
 
@@ -19,9 +20,7 @@ function Certifications({ disableAnimation }: Props): ReactElement {
       style={{ paddingTop: "40px", paddingBottom: "40px" }}
     >
       <h2 style={{ paddingLeft: "10px" }}>Certifications</h2>
-      <p className={commonStyles.secondaryText}>
-        /* Learning never exhausts the mind */
-      </p>
+      <InsideMultilineCommentLikeText text="Learning never exhausts the mind" />
       <div
         data-aos={disableAnimation ? "" : "fade-up"}
         data-aos-offset="200"

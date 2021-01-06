@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import GithubIcon from "../../images/github.svg";
 import LinkedinIcon from "../../images/linkedin.svg";
 import commonStyles from "../../styles/common.module.scss";
+import { InsideMultilineCommentLikeText } from "../../components";
 
 interface Props {}
 
@@ -15,13 +16,7 @@ function ContactMe({}: Props): ReactElement {
     >
       <section id="contact-me">
         <h1 style={{ position: "relative", left: "10px" }}>Contact Me</h1>
-        <p
-          className={commonStyles.secondaryText}
-          style={{ paddingLeft: "10px" }}
-        >
-          /* Feel free to say a Hi */
-        </p>
-
+        <InsideMultilineCommentLikeText text="Feel free to say a Hi" />
         <p
           className={commonStyles.secondaryText}
           style={{ paddingLeft: "10px" }}

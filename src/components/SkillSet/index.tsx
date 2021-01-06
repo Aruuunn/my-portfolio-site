@@ -1,8 +1,9 @@
 import React, { ReactElement, useState } from "react";
 
-import { Skill } from "./components";
-import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
+import commonStyles from "../../styles/common.module.scss";
+import { InsideMultilineCommentLikeText } from "../../components";
+import { Skill } from "./components";
 import { skills } from "./skills.data";
 
 interface Props {
@@ -17,9 +18,7 @@ function Skillset(props: Props): ReactElement {
     <div id="skillset" className={styles.mainContainer}>
       <section className={commonStyles.container}>
         <h2 style={{ position: "relative", left: "10px" }}>My Skillset</h2>
-        <p className={commonStyles.secondaryText}>
-          /* I love learning new technologies and applying it. */
-        </p>
+        <InsideMultilineCommentLikeText text="I love learning new technologies and applying it." />
         <div
           data-aos={disableAnimation ? "" : "fade-up"}
           data-aos-offset="200"

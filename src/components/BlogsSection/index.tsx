@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import { Link } from "gatsby";
 
 import commonStyles from "../../styles/common.module.scss";
+import { InsideMultilineCommentLikeText } from "../../components";
 
 interface Props {}
 
@@ -11,8 +12,10 @@ export default function Blogs({}: Props): ReactElement {
       <section id="blogs" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
         <h2 style={{ position: "relative", left: "10px" }}>Blogs</h2>
         <p className={commonStyles.secondaryText}>
-          /* What could be more satisfying than helping others by spreading your
-          knowledge */
+          <InsideMultilineCommentLikeText
+            text="What could be more satisfying than helping others by spreading your
+          knowledge"
+          />
         </p>
         <Link
           style={{

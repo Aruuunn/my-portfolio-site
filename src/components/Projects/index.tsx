@@ -1,9 +1,10 @@
 import React, { ReactElement, useState, useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { Project } from "./components";
+import { InsideMultilineCommentLikeText } from "../../components";
 import commonStyles from "../../styles/common.module.scss";
 import styles from "./styles.module.scss";
+import { Project } from "./components";
 import { projects } from "./projects.data";
 
 interface Props {
@@ -45,11 +46,11 @@ function Projects(props: Props): ReactElement {
     <div id="projects" className={styles.mainContainer}>
       <section className={commonStyles.container}>
         <h2 style={{ position: "relative", left: "10px" }}>My Top Projects</h2>
-        <p className={commonStyles.secondaryText}>
-          /* I love making something cool. The best thing about coding that I
+        <InsideMultilineCommentLikeText
+          text="I love making something cool. The best thing about coding that I
           love is that I can create something from an idea which started from my
-          brain. */
-        </p>
+          brain."
+        />
         <div
           data-aos={disableAnimation ? "" : "fade-up"}
           data-aos-offset="200"

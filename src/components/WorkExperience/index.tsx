@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 
 import commonStyles from "../../styles/common.module.scss";
 import Timeline from "../Timeline";
+import { InsideMultilineCommentLikeText } from "../../components";
 
 interface Props {
   disableAnimation?: boolean;
@@ -17,12 +18,11 @@ function WorkExperience(props: Props): ReactElement {
       id="work-experience"
     >
       <h2 style={{ position: "relative", left: "10px" }}>Work Experience</h2>
-      <p
+
+      <InsideMultilineCommentLikeText
         style={{ marginBottom: "40px" }}
-        className={commonStyles.secondaryText}
-      >
-        /* Team work makes the dream work */
-      </p>
+        text="Team work makes the dream work"
+      />
       <div
         data-aos={disableAnimation ? "" : "fade-up"}
         data-aos-offset="200"
