@@ -14,13 +14,13 @@
     align-items: center;
 }
 
-.item {
-    background-color: red;
+.item:focus {
+    border: 1px solid $grey;
 }
 
 
 .fillGreen {
-    fill: $bright-green;
+    fill: $green;
 }
 
 .fillNone {

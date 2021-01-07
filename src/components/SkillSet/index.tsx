@@ -32,14 +32,15 @@ function Skillset(props: Props): ReactElement {
             ))}
           </div>
           {skills.length > limit ? (
-            <div
-              className={styles.showMoreText}
+            <button
+              className={commonStyles.showMoreText}
+              style={{ marginLeft: "8px", marginTop: "20px" }}
               onClick={() => {
                 setLimit(skills.length);
               }}
             >
-              Show all
-            </div>
+              Show all skills
+            </button>
           ) : null}
         </div>
       </section>

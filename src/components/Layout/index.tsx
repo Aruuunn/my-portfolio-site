@@ -1,20 +1,28 @@
-import React, { ReactElement, useEffect, useState, createContext } from "react";
+import React, { ReactElement, useEffect, useRef } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+import commomStyles from "../../styles/common.module.scss";
 import CustomCursor from "../CustomCursor";
 import Header from "../Header";
-import Navbar from "../Navbar";
 import Footer from "../Footer";
+import SidePositionIndicator from "../SidePositionIndicator";
 
-interface Props {
+type Props = {
   children: React.ReactNode;
   title?: string;
   disableCustomCursor?: boolean;
-}
+  sideNavBarEnabled?: boolean;
+} & Partial<Parameters<typeof SidePositionIndicator>[0]>;
 
 function Layout(props: Props): ReactElement {
-  const { children, title, disableCustomCursor } = props;
+  const {
+    children,
+    title,
+    disableCustomCursor,
+    sections,
+    sideNavBarEnabled,
+  } = props;
 
   useEffect(() => {
     Aos.init({ once: true, disable: "mobile" });
@@ -22,12 +30,20 @@ function Layout(props: Props): ReactElement {
 
   return (
     <div>
+      <a className={commomStyles.skipLink} href="#main">
+        Jump to Main Content
+      </a>
       <Header title={title} />
-      <Navbar />
       <CustomCursor disabled={disableCustomCursor} />
-      <div style={{ paddingTop: "50px", minHeight: "calc( 100vh - 125px)" }}>
+      {sideNavBarEnabled && sections ? (
+        <SidePositionIndicator sections={sections} />
+      ) : null}
+      <main
+        id="main"
+        style={{ paddingTop: "50px", minHeight: "calc( 100vh - 125px)" }}
+      >
         {children}
-      </div>
+      </main>
       <Footer />
     </div>
   );

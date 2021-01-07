@@ -6,6 +6,8 @@ interface Props {}
 
 export default function Footer({}: Props): ReactElement {
   return (
-    <div className={styles.mainContainer}>Copyright (c) 2021 Arun Murugan</div>
+    <footer className={styles.mainContainer}>
+      Copyright (c) 2021 Arun Murugan
+    </footer>
   );
 }

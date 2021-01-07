@@ -5,14 +5,17 @@ import styles from "./styles.module.scss";
 import { isVisible } from "../../utils";
 
 interface Props {
-  sections: string[];
+  sections: { description: string; idOfSection: string }[];
 }
 
 export default function SidePositionIndicator(props: Props): ReactElement {
   const { sections } = props;
   const [current, setCurrent] = useState(0);
   const elements: HTMLElement[] = sections.map((o) => {
-    return typeof window !== "undefined" && window.document.getElementById(o);
+    return (
+      typeof window !== "undefined" &&
+      window.document.getElementById(o.idOfSection)
+    );
   });
   if (typeof window !== "undefined")
     window.addEventListener("scroll", (_) => {
@@ -28,10 +31,16 @@ export default function SidePositionIndicator(props: Props): ReactElement {
     });
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} aria-for="This Page Navigation">
       {sections.map((o, i) => {
         return (
-          <Link key={i} to={`/#${o}`}>
+          <Link
+            key={i}
+            to={`/#${o.idOfSection}`}
+            accessKey={`${i}`}
+            className={styles.item}
+            title={`Jump to ${o.description}`}
+          >
             <svg
               style={{ margin: "20px" }}
               width="11"

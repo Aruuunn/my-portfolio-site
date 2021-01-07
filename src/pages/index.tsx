@@ -3,7 +3,6 @@ import React from "react";
 import {
   Layout,
   Intro,
-  SidePositionIndicator,
   Skillset,
   Projects,
   WorkExperience,
@@ -16,7 +15,23 @@ import "../styles/global.scss";
 const Home = () => {
   return (
     <>
-      <Layout title={"Arun Murugan | Personal Portfolio"} disableCustomCursor>
+      <Layout
+        title={"Arun Murugan | Personal Portfolio"}
+        disableCustomCursor
+        sideNavBarEnabled
+        sections={[
+          { idOfSection: "intro", description: "Introduction" },
+          { idOfSection: "skillset", description: "My Skillset" },
+          { idOfSection: "projects", description: "My Projects" },
+          { idOfSection: "certifications", description: "My Certifications" },
+          {
+            idOfSection: "work-experience",
+            description: "My Work Experience",
+          },
+          { idOfSection: "blogs", description: "My Blogs" },
+          { idOfSection: "contact-me", description: "Contact Details" },
+        ]}
+      >
         <Intro />
         <Skillset />
         <Projects />
@@ -25,17 +40,6 @@ const Home = () => {
         <BlogsSection />
         <ContactMe />
       </Layout>
-      <SidePositionIndicator
-        sections={[
-          "intro",
-          "skillset",
-          "projects",
-          "certifications",
-          "work-experience",
-          "blogs",
-          "contact-me",
-        ]}
-      />
     </>
   );
 };

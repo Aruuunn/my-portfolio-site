@@ -11,12 +11,12 @@ export default function Blogs({}: Props): ReactElement {
     <div className={commonStyles.container}>
       <section id="blogs" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
         <h2 style={{ position: "relative", left: "10px" }}>Blogs</h2>
-        <p className={commonStyles.secondaryText}>
-          <InsideMultilineCommentLikeText
-            text="What could be more satisfying than helping others by spreading your
+
+        <InsideMultilineCommentLikeText
+          text="What could be more satisfying than helping others by spreading your
           knowledge"
-          />
-        </p>
+        />
+
         <Link
           style={{
             textDecoration: "none",

@@ -34,16 +34,18 @@ function MyBlogs({}: Props): ReactElement {
   }, [page]);
   return (
     <div>
-      {blogs.map((o, i) => {
-        return <Blog key={i} {...o} />;
-        1;
-      })}
+      <div>
+        {blogs.map((o, i) => {
+          return <Blog key={i} {...o} />;
+          1;
+        })}
+      </div>
 
       {fetchedAllBlogs || loading ? null : (
         <button
           disabled={loading}
-          style={{ marginTop: "10px" }}
-          className={commonStyles.textButton}
+          style={{ marginTop: "20px" }}
+          className={commonStyles.showMoreText}
           onClick={() => setPage((s) => s + 1)}
         >
           Load More

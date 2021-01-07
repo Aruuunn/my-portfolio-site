@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react";
 import Helmet from "react-helmet";
 
+import Navbar from "../Navbar";
+
 interface Props {
   title?: string;
 }
@@ -24,6 +26,9 @@ function Header(props: Props): ReactElement {
         />
         <meta name="theme-color" content="#2D2E32" />
       </Helmet>
+      <header>
+        <Navbar />
+      </header>
     </div>
   );
 }

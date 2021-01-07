@@ -81,7 +81,7 @@
 
 .itemActive{
     @extend .item;
-    color: $bright-green;
+    color: $green;
     &::after {
         content: " >";
     }
@@ -92,7 +92,7 @@
 
 .itemActive:hover , .item:hover {
     color:black;
-    background-color: $bright-green;
+    background-color: $green;
 }
 
 

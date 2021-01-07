@@ -88,7 +88,7 @@ function Projects(props: Props): ReactElement {
                 setLimit(projects.length);
               }}
             >
-              Show all
+              Show all top projects
             </div>
           ) : null}
         </div>

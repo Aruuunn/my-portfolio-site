@@ -1,1 +1,1 @@
-export const certificationContainer: string;
+export const cert: string;

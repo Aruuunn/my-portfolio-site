@@ -11,6 +11,12 @@
     color: white;
 }
 
+.title {
+    margin:0;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .description {
     color:$grey;

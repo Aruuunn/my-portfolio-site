@@ -1,4 +1,5 @@
 @import "../styles/colors.scss";
+@import "./font.module.scss";
 
 $xs: 0px;
 $sm: 960px;
@@ -48,6 +49,19 @@ $lg: 1920px;
     flex-direction: column;
 }
 
+.skipLink {
+    position: absolute;
+    top:-100px;
+    color: white;
+    left: -100px;
+    z-index: 100;
+}
+
+.skipLink:focus {
+    top:0;
+    left: 0;
+}
+
 @mixin hide {
     visibility: hidden;
     position: absolute;
@@ -55,7 +69,7 @@ $lg: 1920px;
 }
 
 .secondaryText {
-    color:$grey-darker;
+    color: darken($color: $grey, $amount: 5);
     font-size: 16px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -63,10 +77,40 @@ $lg: 1920px;
 }
 
 .underlinedHeading {
-    border-bottom: 5px solid $bright-green;
+    border-bottom: 5px solid $green;
     padding-right: 30px;
     display: inline-block;
 }
+
+.showMoreText {
+    @extend .mono;
+    border: none;
+    border-bottom: 1px solid $green;
+    background-color: transparent;
+    color:white;
+    padding-left: 0px;
+    font-size: 16px;
+}
+
+.showMoreText:hover, .showMoreText:focus {
+    background-color: $green;
+    color:black;
+}
+
+.url {
+    fill: #97979F;
+}
+
+.link {}
+
+
+.link:focus,
+.link:hover {
+    .url {
+        fill: white;
+    }
+}
+
 
 
 .textButton {
@@ -93,11 +137,11 @@ $lg: 1920px;
     display: inline-block;
     cursor: pointer;
     color: $grey;
-    border-bottom: 1px solid $bright-green;
+    border-bottom: 1px solid $green;
 }
 
 .underlinedLink:hover {
-    background-color: $bright-green;
+    background-color: $green;
     color:black;
 }
 

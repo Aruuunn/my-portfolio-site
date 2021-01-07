@@ -10,9 +10,10 @@
     display: inline;
     text-decoration: none;
     text-transform: capitalize;
-    box-shadow: -1px 1px 10px 0px rgba(40,255,128,0.35),1px 1px 10px 0px rgba(40,255,128,0.35),1px -1px 10px 0px rgba(40,255,128,0.35);
+    box-shadow: -1px 1px 7px 0px  rgba(40,255,128,0.35),1px 1px 7px 0px rgba(40,255,128,0.35),1px -1px 7px 0px rgba(40,255,128,0.35);
 }
 
-.primaryButton:hover {
+.primaryButton:hover, .primaryButton:focus {
     box-shadow: -1px 1px 15px 0px rgba(40,255,128,0.35),1px 1px 15px 0px rgba(40,255,128,0.35),1px -1px 15px 0px rgba(40,255,128,0.35);
 }
+

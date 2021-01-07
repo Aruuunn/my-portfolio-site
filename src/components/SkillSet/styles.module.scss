@@ -1,6 +1,4 @@
 @import "../../styles/colors.scss";
-@import "../../styles/common.module.scss";
-
 
 
 
@@ -17,8 +15,4 @@
     align-items: center;
 }
 
-.showMoreText {
-    @extend .underlinedLink;
-    margin:10px;
-}
 
