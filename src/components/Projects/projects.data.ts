@@ -28,7 +28,7 @@ export const projects: {
     description:
       "My Portfolio site. Designed using figma and implemented using gatsby.The blogs page fetches the latest data from firestore. ",
     tags: ["Gatsby", "Typescript", "Graphql", "Sass", "figma", "firebase"],
-    url: "arunmurugan78.github.io",
+    url: "https://arunmurugan78.github.io",
     githubUrl: "https://github.com/ArunMurugan78/my-portfolio-site",
   },
   {
@@ -51,7 +51,7 @@ export const projects: {
     image: "cat-gallery.png",
     title: "Cat Gallery",
     description:
-      "infintely Scroll through Cute Cat Image. Also can save and share the images",
+      "infintely Scroll through Cute Cat images. Also one can save and share the images",
     githubUrl: "https://github.com/ArunMurugan78/CatGallery",
     tags: ["flutter", "mobile"],
   },
