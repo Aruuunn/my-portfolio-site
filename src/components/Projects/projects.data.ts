@@ -6,6 +6,19 @@ export const projects: {
   image: string;
   tags: string[];
 }[] = [
+    {
+    image: "anonchat.png",
+    title: "AnonChat",
+    description: "AnonChat is a end-to-end encrypted anonymous chatting web application. It is a invite based chat app, anyone can chat anonymously with a person who shared their invitation. ",
+    url: "https://anon-chat-web.herokuapp.com/app/",
+    githubUrl: "https://github.com/ArunMurugan78/anonchat-frontend",
+    tags: [
+      "nodejs",
+      "angular",
+      "nestjs",
+      "tailwindcss"
+      ]
+  },
   {
     image: "clustering-visualizer.png",
     title: "Clustering Algorithm Visualizer",
@@ -55,12 +68,12 @@ export const projects: {
     githubUrl: "https://github.com/ArunMurugan78/CatGallery",
     tags: ["flutter", "mobile"],
   },
-  {
-    image: "blog-website.png",
-    title: "A Blog Web site",
-    description:
-      "Do all CRUD operations. made using express, react and mongoDB",
-    url: "https://blogzzzz.herokuapp.com/",
-    tags: ["expressjs", "nodejs", "react", "mongodb"],
-  },
+  // {
+  //   image: "blog-website.png",
+  //   title: "A Blog Web site",
+  //   description:
+  //     "Do all CRUD operations. made using express, react and mongoDB",
+  //   url: "https://blogzzzz.herokuapp.com/",
+  //   tags: ["expressjs", "nodejs", "react", "mongodb"],
+  // },
 ];
