@@ -1,4 +1,32 @@
-export const myCertifications = [
+export const myCertifications: {
+  organisation: string;
+  name: string;
+  url: string;
+}[] = [
+  {
+    name: "MongoDB for Javascript Developers",
+    organisation: "MONGODB UNIVERSITY",
+    url:
+      "https://university.mongodb.com/course_completion/4c9f924a-2b76-4912-ba15-84037f735d92?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+  },
+  {
+    name: "The MongoDB Aggregation Framework",
+    organisation: "MONGODB UNIVERSITY",
+    url:
+      "https://university.mongodb.com/course_completion/ed8e64b0-79db-4372-a285-720d149fd8d5?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+  },
+  {
+    name: "MongoDB Basic Cluster Administration",
+    organisation: "MONGODB UNIVERSITY",
+    url:
+      "https://university.mongodb.com/course_completion/8895f330-f0f7-4a72-8c6f-b5886b332049?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+  },
+  {
+    name: "MongoDB Basics",
+    organisation: "MONGODB UNIVERSITY",
+    url:
+      "https://university.mongodb.com/course_completion/47be3fba-2cac-492e-9b43-f390e05d4af1?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing",
+  },
   {
     organisation: "COURSERA",
     name: "The Bits and Bytes of Computer Networking",
