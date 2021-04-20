@@ -3,7 +3,7 @@ module.exports = {
     title: "Personal Portfolio | Arun Murugan",
     description: "Personal Portfolio site of Arun Murugan",
     author: "Arun Murugan",
-    siteUrl: "localhost:8000",
+    siteUrl: "https://arunmurugan78.github.io",
   },
   plugins: [
     "gatsby-plugin-sass",

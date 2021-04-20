@@ -17,7 +17,7 @@ function ContactMe({}: Props): ReactElement {
       <section id="contact-me">
         <h1 style={{ position: "relative", left: "10px" }}>Contact Me</h1>
         <InsideMultilineCommentLikeText text="Feel free to say a Hi" />
-        <p
+        <div
           className={commonStyles.secondaryText}
           style={{ paddingLeft: "10px" }}
         >
@@ -47,7 +47,7 @@ function ContactMe({}: Props): ReactElement {
               />
             </Link>
           </div>
-        </p>
+        </div>
       </section>
     </div>
   );

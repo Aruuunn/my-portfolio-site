@@ -29,7 +29,7 @@ function Layout(props: Props): ReactElement {
   }, []);
 
   return (
-    <div>
+    <>
       <a className={commomStyles.skipLink} href="#main">
         Jump to Main Content
       </a>
@@ -45,7 +45,21 @@ function Layout(props: Props): ReactElement {
         {children}
       </main>
       <Footer />
-    </div>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-T2F96VEMTM"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-T2F96VEMTM');
+          `,
+        }}
+      ></script>
+    </>
   );
 }
 
