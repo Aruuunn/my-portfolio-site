@@ -1,5 +1,6 @@
-import React, { ReactElement, useEffect, useRef } from "react";
+import React, { ReactElement, useEffect } from "react";
 import Aos from "aos";
+import { Helmet } from "react-helmet";
 import "aos/dist/aos.css";
 
 import commomStyles from "../../styles/common.module.scss";
@@ -30,6 +31,23 @@ function Layout(props: Props): ReactElement {
 
   return (
     <>
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-2HH1XKHTGY"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-2HH1XKHTGY');
+          `,
+          }}
+        ></script>
+      </Helmet>
       <a className={commomStyles.skipLink} href="#main">
         Jump to Main Content
       </a>
@@ -45,20 +63,6 @@ function Layout(props: Props): ReactElement {
         {children}
       </main>
       <Footer />
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-T2F96VEMTM"
-      ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-T2F96VEMTM');
-          `,
-        }}
-      ></script>
     </>
   );
 }

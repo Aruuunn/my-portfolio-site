@@ -21,7 +21,7 @@ function ContactMe({}: Props): ReactElement {
           className={commonStyles.secondaryText}
           style={{ paddingLeft: "10px" }}
         >
-          email: arunmurugan200@gmail.com
+          email: arunmurugan.official@gmail.com
           <div style={{ display: "flex", marginTop: "20px" }}>
             <Link
               target="_blank"
