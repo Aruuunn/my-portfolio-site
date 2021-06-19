@@ -14,12 +14,8 @@ export const skills: ISkill[] = [
   { name: "Bootstrap", value: 3 },
   { name: "Sass", value: 2 },
   { name: "Docker", value: 3 },
-  { name: "Figma", value: 2 },
   { name: "Html5", value: 4 },
-  { name: "Golang", value: 2 },
-  { name: "Flutter", value: 2 },
   { name: "Git", value: 3 },
   { name: "C++", value: 3 },
-  { name: "Gatsby", value: 2 },
   { name: "Responsive Web Design", value: 4 },
 ];

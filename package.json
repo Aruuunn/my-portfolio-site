@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && cp ./CNAME ./public/CNAME && gh-pages  --repo https://github.com/ArunMurugan78/ArunMurugan78.github.io.git  -d public -b master"
+    "deploy": "gatsby build &&  gh-pages  --repo git@github.com:ArunMurugan78/ArunMurugan78.github.io.git  -d public -b master"
   },
   "license": "0BSD",
   "dependencies": {
