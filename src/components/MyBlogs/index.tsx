@@ -1,36 +1,50 @@
-import React, { ReactElement, useState, useEffect, useContext } from "react";
-import firebase from "firebase";
-
-import "../../firebase";
+import React, { ReactElement, useState, useEffect } from "react";
+import {BlogPost, getAllPosts, getHashnodePostIterator} from "blogmon"
 import Blog from "../Blog";
 import commonStyles from "../../styles/common.module.scss";
 import { Blog as IBlog } from "../Blog/Blog.interface";
 import LoadingIndicator from "../LoadingIndicator";
-import fetchBlogs from "../../utils/fetch.blogs";
 
 interface Props {}
 
+const hashnode = getHashnodePostIterator({userName: "arunmurugan"});
+
+const blogPostAdapter = (source: string) => 
+      (blogPost: BlogPost): IBlog => 
+              ({
+                url: blogPost.url,
+                createdAt: blogPost.dateAdded.toISOString(),
+                source,
+                ...blogPost
+              })
+        
+const hashNodeBlogPostAdapter = blogPostAdapter("arunmurugan.hashnode.dev")
+const devtoBlogPostAdapter = blogPostAdapter("dev.to")
+
+
 function MyBlogs({}: Props): ReactElement {
-  const LIMIT = 10;
-  const db = firebase.firestore();
   const [fetchedAllBlogs, setFetchedAllBlogs] = useState(false);
-  const [lastSnapShot, setLastSnapShot] = useState<
-    firebase.firestore.QueryDocumentSnapshot<firebase.firestore.DocumentData>
-  >();
+ 
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState<IBlog[]>([]);
+
+
   useEffect(() => {
     setLoading(true);
-    if (db)
-      fetchBlogs(db, LIMIT, lastSnapShot).then(({ blogs, lastSnapShot }) => {
-        setLoading(false);
-        if (blogs.length === 0) {
-          setFetchedAllBlogs(true);
-        }
-        setLastSnapShot(lastSnapShot);
-        setBlogs((s) => [...s, ...blogs]);
-      });
+    hashnode.nextPage().then(async (fetchedBlogs) => {
+      if (fetchedBlogs) {
+        setBlogs(blogs => [...blogs, ...fetchedBlogs.map(hashNodeBlogPostAdapter)]);
+      } else {
+        // I have only like one blog post on dev.to, I don't plan on posting there hereafter.
+        // So wont cause any problem.
+        fetchedBlogs = await getAllPosts({devtoUserName: "arunmurugan78"})
+        setBlogs(blogs => [...blogs, ...fetchedBlogs.map(hashNodeBlogPostAdapter)]);
+        setFetchedAllBlogs(true);
+      }
+      
+      setLoading(false);
+    })
   }, [page]);
   return (
     <div>

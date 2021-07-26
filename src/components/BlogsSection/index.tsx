@@ -13,8 +13,7 @@ export default function Blogs({}: Props): ReactElement {
         <h2 style={{ position: "relative", left: "10px" }}>Blogs</h2>
 
         <InsideMultilineCommentLikeText
-          text="What could be more satisfying than helping others by spreading your
-          knowledge"
+          text="Being a beginner blogger, I'm starting to love it!"
         />
 
         <Link

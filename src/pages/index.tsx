@@ -35,6 +35,7 @@ const Home = () => {
         <Intro />
         <Skillset />
         <Projects />
+        <BlogsSection />
         <Certifications />
         <WorkExperience />
         <ContactMe />

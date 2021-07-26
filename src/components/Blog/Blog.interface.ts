@@ -6,4 +6,5 @@ export interface Blog {
   tags: string[];
   createdAt: string;
   source: string;
+  coverImageUrl: string;
 }
