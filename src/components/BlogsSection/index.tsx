@@ -10,7 +10,7 @@ export default function Blogs({}: Props): ReactElement {
   return (
     <div className={commonStyles.container}>
       <section id="blogs" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
-        <h2 style={{ position: "relative", left: "10px" }}>Blogs</h2>
+        <h2 style={{ position: "relative", left: "10px" }}>Blog</h2>
 
         <InsideMultilineCommentLikeText
           text="Being a beginner blogger, I'm starting to love it!"
@@ -26,7 +26,7 @@ export default function Blogs({}: Props): ReactElement {
           to="/blogs"
           className={commonStyles.underlinedLink}
         >
-          Go to Blogs{" "}
+          Go to my Blog{" "}
         </Link>
       </section>
     </div>

@@ -48,7 +48,7 @@ function Blog(props: Props): ReactElement {
       >
         {source}
       </p>
-      <p className={styles.description}>{description.slice(0, 100) + (description.length > 50 ? "...": "")}</p>
+      <p className={styles.description}>{description.slice(0, 150) + (description.length > 150 ? "...": "")}</p>
       <Tags tags={tags} />
     </div>
   );

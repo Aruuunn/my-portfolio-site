@@ -11,11 +11,11 @@ function Blogs(): ReactElement {
     <Layout title="Blogs | Arun Murugan" disableCustomCursor>
       <div className={commonStyles.container}>
         <h1 className={commonStyles.underlinedHeading} style={{ margin: 0 }}>
-          Blogs
+          Blog Posts
         </h1>
 
         <p className={commonStyles.secondaryText} style={{ paddingLeft: 0 }}>
-          /* Recently made blogs by me. */
+          /* Recently made blog posts by me. */
         </p>
         <MyBlogs />
       </div>
