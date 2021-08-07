@@ -22,16 +22,15 @@ function Intro({}: Props): ReactElement {
 
   return (
     <div className={styles.contentContainer} id="intro">
-      <MyImage style={{ marginBottom: "70px" }} size={200} />
-
       <div className={styles.item} style={{ display: "inline-block" }}>
-        <p style={{ maxWidth: "600px" }}>
-          👋 Hello there, I'm Arun. I am a{" "}
+        <div style={{ maxWidth: "600px" }}>
+          <h1 style={{marginBottom: "20px"}}>Hi, I'm Arun.</h1>
+           I am a{" "}
           <span className={styles.underline}>Web developer</span> and a Tech
           Enthusiast. I love coding and coffee ☕.
-        </p>
+        </div>
 
-        <div style={{ marginTop: "30px" }}>
+        <div style={{ marginTop: "40px" }}>
           <PrimaryLinkButton to="/#contact-me" text="Contact Me" />
         </div>
       </div>
