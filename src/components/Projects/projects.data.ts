@@ -6,6 +6,20 @@ export const projects: {
   image: string;
   tags: string[];
 }[] = [
+  {
+    image: "mdslide.png",
+    title: "MDSLIDE",
+    description: "Create Minimalistic Slide Presentations powered by Markdown.",
+    url: "https://mdslide.vercel.app/",
+    githubUrl: "https://github.com/ArunMurugan78/mdslide/",
+    tags: [
+      "nextjs",
+      "typescript",
+      "reactjs",
+      "auth0",
+      "mongodb"
+      ]
+  },
     {
     image: "anonchat.png",
     title: "AnonChat",
@@ -52,13 +66,13 @@ export const projects: {
     githubUrl: "https://github.com/ArunMurugan78/Shortest-Path-Visualiser",
     tags: ["react", "javacsript", "algorithm", "bootstrap"],
   },
-  {
-    image: "quizz-now.png",
-    title: "Quizz Now",
-    description: "A Quizz App made using Nestjs and Reactjs",
-    githubUrl: "https://github.com/ArunMurugan78/QuizzNow",
-    tags: ["full stack", "nestjs", "reactjs", "typescript", "nodejs"],
-  },
+  // {
+  //   image: "quizz-now.png",
+  //   title: "Quizz Now",
+  //   description: "A Quizz App made using Nestjs and Reactjs",
+  //   githubUrl: "https://github.com/ArunMurugan78/QuizzNow",
+  //   tags: ["full stack", "nestjs", "reactjs", "typescript", "nodejs"],
+  // },
 
   {
     image: "cat-gallery.png",
