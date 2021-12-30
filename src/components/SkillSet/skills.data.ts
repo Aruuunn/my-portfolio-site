@@ -2,6 +2,7 @@ import ISkill from "./Skill.interface";
 
 export const skills: ISkill[] = [
   { name: "Javascript", value: 4 },
+  { name: "Golang", value: 4 },
   { name: "Typescript", value: 3 },
   { name: "Reactjs", value: 4 },
   { name: "MongoDB", value: 4 },
